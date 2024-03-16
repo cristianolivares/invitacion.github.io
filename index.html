@@ -458,7 +458,7 @@
       var confirmBtn = document.getElementById("confirmBtn");
 
       confirmBtn.onclick = function () {
-        var response = document.getElementById("response").value;
+        var response = document.getElementById("response").value.trim();
         intentos++;
         if (
           response.toLowerCase() === "edgar augusto" ||
