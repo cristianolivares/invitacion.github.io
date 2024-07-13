@@ -96,7 +96,7 @@
       .envelope .card h2 {
         font-family: "Pacifico", cursive;
         font-size: 2rem;
-        line-height: 0.6;
+        line-height: 1.0;
         margin-top: 0.4em;
       }
       .envelope .card p {
@@ -270,7 +270,7 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <h4>Antes de continuar</h4>
-        <h3 class="subtitle">¿Cual es el mejor poeta de todos?</h3>
+        <h3 class="subtitle">¿Qué significa 'Ohana'?</h3>
         <input type="text" id="response" placeholder="Escribe aquí" />
         <button id="confirmBtn">Continuar</button>
       </div>
@@ -278,12 +278,11 @@
 
     <div class="envelope" id="envelope">
       <div class="card">
-        <h2>Estas invitada</h2>
-        <p>¿A qué? No sé, pero salgamos</p>
+        <h2>Estás cordialmente invitada</h2>
         <p>
-          Fecha: Este fincho<br />
-          Hora: Cuando puedas<br />
-          Lugar: Yo te recojo<br />
+          Lugar: La Gatoria<br />
+          Hora: 4:00 pm<br />
+          Día: Mañana<br />
         </p>
       </div>
       <div class="flap-outside flap-container">
@@ -461,22 +460,22 @@
         var response = document.getElementById("response").value.trim();
         intentos++;
         if (
-          response.toLowerCase() === "edgar augusto" ||
-          response.toLowerCase() === "edgar augusto jaramillo" ||
-          response.toLowerCase() === "edgar jaramillo"
+          response.toLowerCase() === "familia" ||
+          response.toLowerCase() === "significa familia" ||
+          response.toLowerCase() === "ohana significa familia"
         ) {
-          alert("Porque te hizo a ti          (y a tu hermana 👀)");
+          alert("Y tu familia, nunca te abandona");
           modal.style.display = "none";
           invitation.style.display = "block";
         } else {
           if (intentos === 1) {
-            alert("Noup, ese no es");
+            alert("Noup, esa no es");
           } else if (intentos === 2) {
-            alert("No, ese tampoco");
+            alert("No, esa tampoco");
           } else if (intentos === 3) {
-            alert("¿Ni asi? Pista: el primer nombre empieza por E");
+            alert("¿Ni asi? Pista: is in espanich");
           } else if (intentos >= 4) {
-          alert("Primer nombre por E y apellido por J, no te puedo ayudar mas :/");
+          alert("Empieza por F, no te puedo ayudar mas :/");
           }
         }
       };
